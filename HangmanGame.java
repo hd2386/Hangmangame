@@ -127,7 +127,6 @@ public class HangmanGame {
     boolean hit = false;
     boolean success = false;
     Player winner;
-    char PC_turn = Player.randomchar();
     char[] leer = new char[word.length()];
 
     for (int i = 0; i < word.length(); i++) {
@@ -136,10 +135,9 @@ public class HangmanGame {
     }
     System.out.println();
     System.out.println(leer);
-    System.out.println(PC_turn);
 
     while (!word.equals(String.valueOf(leer)) && fehler_count < 7) {
-      
+
       for (int i = 0; i < playerArray.length; ++i) {
         hit = false;
         System.out.println();
